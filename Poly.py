@@ -1,6 +1,7 @@
-from ortools.sat.python import cp_model
 from syms import *
 from connections import *
+from cell import Cell
+# TODO actually use Cell
 
 
 class Poly(tuple):

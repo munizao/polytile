@@ -1,14 +1,5 @@
 from itertools import product
-
-class Cell(tuple):
-    cache = {}
-    def __new__(cls, coords):
-        cell = Cell.cache.get(coords)
-        if cell:
-            return cell
-        cell = super(Cell, cls).__new__(cls)
-        cell.aspects = []
-        cls.cache[coords] = cell
+from cell import Cell
 
 class Board():
     def __init__(self, dims, holes) -> None:
